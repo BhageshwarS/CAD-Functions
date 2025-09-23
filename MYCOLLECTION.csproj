@@ -56,6 +56,7 @@
   <ItemGroup>
     <Compile Include="ACDocHandling.cs" />
     <Compile Include="ArctextManipulation.cs" />
+    <Compile Include="CadHelper.cs" />
     <Compile Include="Fillet.cs" />
     <Compile Include="plotfunctions.cs" />
     <Compile Include="DimensionTypesClass.cs" />

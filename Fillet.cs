@@ -8,6 +8,80 @@ using System.Threading.Tasks;
 
 namespace MYCOLLECTION
 {
+
+    //public void FilletAtVertex(Polyline pline, int vertexIndex, double radius)
+    //{
+    //    // Determine the previous and next vertex indices, accounting for closed polylines
+    //    int prevIndex = (vertexIndex == 0 && pline.Closed) ? pline.NumberOfVertices - 1 : vertexIndex - 1;
+    //    int nextIndex = (vertexIndex == pline.NumberOfVertices - 1 && pline.Closed) ? 0 : vertexIndex + 1;
+
+    //    // Only perform the fillet if both segments are lines or arcs
+    //    if ((pline.GetSegmentType(prevIndex) == SegmentType.Line || pline.GetSegmentType(prevIndex) == SegmentType.Arc) &&
+    //        (pline.GetSegmentType(vertexIndex) == SegmentType.Line || pline.GetSegmentType(vertexIndex) == SegmentType.Arc))
+    //    {
+    //        FilletAt(pline, vertexIndex, radius);
+    //    }
+    //    else
+    //    {
+    //        // Alert or handle cases where fillet cannot be applied
+    //    }
+    //}
+    //private bool Clockwise(Point2d p1, Point2d p2, Point2d p3) =>
+    //    ((p2.X - p1.X) * (p3.Y - p1.Y) - (p2.Y - p1.Y) * (p3.X - p1.X)) < 1e-8;
+    //private void FilletAt(Polyline pline, int index, double radius)
+    //{
+    //    int prev = index == 0 && pline.Closed ? pline.NumberOfVertices - 1 : index - 1;
+    //    SegmentType prevType = pline.GetSegmentType(prev);
+    //    SegmentType nextType = pline.GetSegmentType(index);
+
+    //    // Call the appropriate fillet method based on segment types
+    //    if (prevType == SegmentType.Line && nextType == SegmentType.Line)
+    //    {
+    //        PerformLineFillet(pline, prev, index, radius);
+    //    }
+
+    //}
+    //private void PerformLineFillet(Polyline pline, int prev, int index, double radius)
+    //{
+    //    LineSegment2d seg1 = pline.GetLineSegment2dAt(prev);
+    //    LineSegment2d seg2 = pline.GetLineSegment2dAt(index);
+    //    Vector2d vec1 = seg1.StartPoint - seg1.EndPoint;
+    //    Vector2d vec2 = seg2.EndPoint - seg2.StartPoint;
+
+    //    // Calculate angle between segments and distance to cut back
+    //    double angle = (Math.PI - vec1.GetAngleTo(vec2)) / 2.0;
+    //    double dist = radius * Math.Tan(angle);
+
+    //    // Ensure the distance does not exceed the segment lengths
+    //    if (dist == 0.0 || dist > seg1.Length || dist > seg2.Length)
+    //        return;
+
+    //    // Calculate new tangent points
+    //    Point2d pt1 = seg1.EndPoint + vec1.GetNormal() * dist;
+    //    Point2d pt2 = seg2.StartPoint + vec2.GetNormal() * dist;
+
+    //    // Calculate the bulge value for the arc
+    //    double bulge = Math.Tan(angle / 2.0);
+    //    if (Clockwise(seg1.StartPoint, seg1.EndPoint, seg2.EndPoint))
+    //        bulge = -bulge;
+
+    //    // Insert new vertex with bulge and update polyline
+    //    pline.AddVertexAt(index, pt1, bulge, 0.0, 0.0);
+    //    pline.SetPointAt(index + 1, pt2);
+    //}
+
+
+
+
+
+
+
+
+
+
+
+
+
     /// <summary>
     /// Extension methods for performing fillet operations on AutoCAD Polylines at specified vertices.
     /// </summary>
