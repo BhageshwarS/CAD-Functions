@@ -67,6 +67,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RoundedFormControls.cs" />
     <Compile Include="SelectionFilters.cs" />
+    <Compile Include="VideoFrameSimulation.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
